@@ -11,8 +11,8 @@ public class Test3 {
 
     @Before
     public void setup(){
-       RestAssured.baseURI = "https://reqres.in/";
-       RestAssured.basePath = "api/";
+       RestAssured.baseURI = "https://reqres.in";
+       RestAssured.basePath = "/api";
        RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
     }
 
