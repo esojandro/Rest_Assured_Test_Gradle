@@ -3,6 +3,8 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.http.Headers;
+import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -68,5 +70,25 @@ public class Test3 {
                 .extract().jsonPath().getString("job");
 
         assertThat(jobUpdated, equalTo("zion resident"));
+    }
+
+    @Test
+    public void getAllUserTest(){
+        Response response = given()
+                .get("users?page=2");
+
+        Headers headers = response.getHeaders();
+        int statusCode = response.getStatusCode();
+        String body = response.getBody().asString();
+        String contenType = response.getSessionId();
+
+        assertThat(statusCode, equalTo(HttpStatus.SC_OK));
+        System.out.println("body: " + body);
+        System.out.println("content type: " + contenType);
+        System.out.println("headers: " + headers);
+        System.out.println("**************************");
+        System.out.println("**************************");
+        System.out.println(headers.get("Content-Typpe"));
+        System.out.println(headers.get("Transfer-Encoding"));
     }
 }
