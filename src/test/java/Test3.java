@@ -9,6 +9,9 @@ import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -17,15 +20,15 @@ import static io.restassured.path.json.JsonPath.from;
 public class Test3 {
 
     @BeforeAll
-    public static void setup(){
-       RestAssured.baseURI = "https://reqres.in";
-       RestAssured.basePath = "/api";
-       RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
-       RestAssured.requestSpecification = new RequestSpecBuilder().setContentType(ContentType.JSON).build();
+    public static void setup() {
+        RestAssured.baseURI = "https://reqres.in";
+        RestAssured.basePath = "/api";
+        RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
+        RestAssured.requestSpecification = new RequestSpecBuilder().setContentType(ContentType.JSON).build();
     }
 
     @Test
-    public void getUserTest(){
+    public void getUserTest() {
         given()
                 .get("/users/2")
                 .then()
@@ -34,7 +37,7 @@ public class Test3 {
     }
 
     @Test
-    public void deleteUserTest(){
+    public void deleteUserTest() {
         given()
                 .delete("/users/2")
                 .then()
@@ -42,7 +45,7 @@ public class Test3 {
     }
 
     @Test
-    public void pathUserTest(){ // El path es para actualizar solo un elemento del Json
+    public void pathUserTest() { // El path es para actualizar solo un elemento del Json
         String nameUpdated = given()
                 .when()
                 .body("{\n" +
@@ -58,7 +61,7 @@ public class Test3 {
     }
 
     @Test
-    public void putUserTest(){
+    public void putUserTest() {
         String jobUpdated = given()
                 .when()
                 .body("{\n" +
@@ -74,7 +77,7 @@ public class Test3 {
     }
 
     @Test
-    public void getAllUserTest(){
+    public void getAllUserTest() {
         Response response = given()
                 .get("users?page=2");
 
@@ -95,8 +98,8 @@ public class Test3 {
 
     @Test
 
-    public void getAllUsersTest(){
-        String requestBody = given()
+    public void getAllUsersTest() {
+        String requestBody = given()// responseBody
                 .when()
                 .get("users?page=2")
                 .then()
@@ -109,10 +112,17 @@ public class Test3 {
         int totalPages = from(requestBody).get("total_pages");
 
         // Para extraer elementos de un array en la respuesta
-        int idFirstUser = from(requestBody).get("data[0].id");
+        int idFirstUser = from(requestBody).get("data[0].id"); // data es un arreglo
 
-        System.out.println("page: " + page);
+        /*System.out.println("page: " + page);
         System.out.println("total_pages: " + totalPages);
-        System.out.println("id first user: " + idFirstUser);
+        System.out.println("id first user: " + idFirstUser);*/
+
+        // Filtrar los usuarios con ID mayor a 10
+        List<Map> usersWithIdGreasterThan10 = from(requestBody).get("data.findAll { user -> user.id > 10 }");
+        String email = usersWithIdGreasterThan10.get(0).get("email").toString(); // Trae el email de los usuarios con id mayor a 10
+
+        List<Map> user = from(requestBody).get("data.findAll { user -> user.id > 10 && user.last_name == 'Howell'}");
+        int id = Integer.valueOf(user.get(0).get("id").toString());
     }
 }
