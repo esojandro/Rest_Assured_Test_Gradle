@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static io.restassured.path.json.JsonPath.from;
 
 public class Test3 {
 
@@ -90,5 +91,28 @@ public class Test3 {
         System.out.println("**************************");
         System.out.println(headers.get("Content-Typpe"));
         System.out.println(headers.get("Transfer-Encoding"));
+    }
+
+    @Test
+
+    public void getAllUsersTest(){
+        String requestBody = given()
+                .when()
+                .get("users?page=2")
+                .then()
+                .extract()
+                .body()
+                .asString();
+
+        // Para extraer elementos de una respuesta
+        int page = from(requestBody).get("page");
+        int totalPages = from(requestBody).get("total_pages");
+
+        // Para extraer elementos de un array en la respuesta
+        int idFirstUser = from(requestBody).get("data[0].id");
+
+        System.out.println("page: " + page);
+        System.out.println("total_pages: " + totalPages);
+        System.out.println("id first user: " + idFirstUser);
     }
 }

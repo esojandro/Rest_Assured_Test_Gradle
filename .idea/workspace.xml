@@ -79,7 +79,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.Test3.getAllUserTest">
+  <component name="RunManager" selected="Gradle.Test3.getAllUsersTest">
     <configuration name="Test3.deleteUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -126,7 +126,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Test3.getUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Test3.getAllUsersTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -139,7 +139,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;Test3.getUserTest&quot;" />
+            <option value="&quot;Test3.getAllUsersTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -197,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Test3.getAllUsersTest" />
         <item itemvalue="Gradle.Test3.getAllUserTest" />
         <item itemvalue="Gradle.Test3.putUserTest" />
         <item itemvalue="Gradle.Test3.pathUserTest" />
         <item itemvalue="Gradle.Test3.deleteUserTest" />
-        <item itemvalue="Gradle.Test3.getUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +214,8 @@
       <option name="presentableId" value="Default" />
       <updated>1663271376027</updated>
       <workItem from="1663271377723" duration="5670000" />
-      <workItem from="1663277280014" duration="4758000" />
+      <workItem from="1663277280014" duration="4956000" />
+      <workItem from="1663337942042" duration="831000" />
     </task>
     <task id="LOCAL-00001" summary="Config changes">
       <created>1663273692475</created>
@@ -265,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663280131688</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Config changes and put, update test was added">
+      <created>1663282916991</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663282916991</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
