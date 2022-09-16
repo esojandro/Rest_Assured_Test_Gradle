@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc0deed-e661-49d7-bd4a-c4362629d2f2" name="Changes" comment="Test 3 get all users was added">
+    <list default="true" id="3fc0deed-e661-49d7-bd4a-c4362629d2f2" name="Changes" comment="Test 3 get all users extraction of user id and last name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test3.java" afterDir="false" />
     </list>
@@ -74,11 +74,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Gradle.Test3.getAllUsersTest">
     <configuration name="Test3.deleteUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -215,7 +216,7 @@
       <updated>1663271376027</updated>
       <workItem from="1663271377723" duration="5670000" />
       <workItem from="1663277280014" duration="4956000" />
-      <workItem from="1663337942042" duration="2367000" />
+      <workItem from="1663337942042" duration="4289000" />
     </task>
     <task id="LOCAL-00001" summary="Config changes">
       <created>1663273692475</created>
@@ -280,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663339083008</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Test 3 get all users extraction of user id and last name">
+      <created>1663340762624</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663340762624</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +309,7 @@
     <MESSAGE value="Config changes" />
     <MESSAGE value="Config changes and put, update test was added" />
     <MESSAGE value="Test 3 get all users was added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test 3 get all users was added" />
+    <MESSAGE value="Test 3 get all users extraction of user id and last name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test 3 get all users extraction of user id and last name" />
   </component>
 </project>

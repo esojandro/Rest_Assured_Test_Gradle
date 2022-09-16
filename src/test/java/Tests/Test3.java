@@ -1,3 +1,5 @@
+package Tests;
+
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -124,5 +126,6 @@ public class Test3 {
 
         List<Map> user = from(requestBody).get("data.findAll { user -> user.id > 10 && user.last_name == 'Howell'}");
         int id = Integer.valueOf(user.get(0).get("id").toString());
+
     }
 }
