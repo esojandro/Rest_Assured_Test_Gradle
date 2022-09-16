@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc0deed-e661-49d7-bd4a-c4362629d2f2" name="Changes" comment="New estructure in tests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Test3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/Test4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test4.java" afterDir="false" />
-    </list>
+    <list default="true" id="3fc0deed-e661-49d7-bd4a-c4362629d2f2" name="Changes" comment="New estructure in tests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +83,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Test4.createUserTest (1)">
+  <component name="RunManager" selected="Gradle.Test4">
     <configuration name="Test3.getAllUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -208,8 +201,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Test4.createUserTest (1)" />
         <item itemvalue="Gradle.Test4" />
+        <item itemvalue="Gradle.Test4.createUserTest (1)" />
         <item itemvalue="Gradle.Test4.createUserTest" />
         <item itemvalue="Gradle.Test3.getAllUsersTest" />
         <item itemvalue="Gradle.Test3.getAllUserTest" />
@@ -226,7 +219,7 @@
       <updated>1663271376027</updated>
       <workItem from="1663271377723" duration="5670000" />
       <workItem from="1663277280014" duration="4956000" />
-      <workItem from="1663337942042" duration="8164000" />
+      <workItem from="1663337942042" duration="8908000" />
     </task>
     <task id="LOCAL-00001" summary="Config changes">
       <created>1663273692475</created>
@@ -305,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663342646737</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="New estructure in tests">
+      <created>1663346757062</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663346757062</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,5 +329,15 @@
     <MESSAGE value="Test 3 get all users extraction of user id and last name" />
     <MESSAGE value="New estructure in tests" />
     <option name="LAST_COMMIT_MESSAGE" value="New estructure in tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="io.restassured.path.xml.exception.XmlPathException" package="io.restassured.path.xml.exception" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

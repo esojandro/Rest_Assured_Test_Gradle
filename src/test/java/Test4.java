@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static io.restassured.path.xml.XmlPath.from;
 
-public class Test4 { //WIP
+public class Test4 { // WIP
 
     @BeforeAll
     public static void setup() {
@@ -27,7 +27,7 @@ public class Test4 { //WIP
                         "\"name\": \"morpheus\",\n" +
                         "\"job\": \"leader\"\n" +
                         "}")
-                .post("users")
+                .post("/users")
                 .then().extract().body().asString();
 
         User user = from(requestBody).getObject("", User.class);
